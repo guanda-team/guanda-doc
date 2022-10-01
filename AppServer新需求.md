@@ -32,8 +32,8 @@ flowchart TB
 ### 🔶 設定是否啟用 App 配對
 
 ```http
-POST /api/enableAppPairing
-Authorization: Bearer <token>
+POST {{url}}/api/enableAppPairing
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -44,8 +44,8 @@ Content-Type: application/json
 ### 🔶 機台軟體呼叫註冊配料
 
 ```http
-POST /api/registerAssmebly
-Authorization: Bearer <token>
+POST {{url}}/api/registerAssmebly
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -55,17 +55,24 @@ Content-Type: application/json
 ### 🔶 機台軟體呼叫註銷配料
 
 ```http
-POST /api/unregisterAssmebly
-Authorization: Bearer <token>
+POST {{url}}/api/unregisterAssmebly
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
 }
 ```
 
+### 🔶 查詢是否啟用 App 配對
+
+```http
+GET {{url}}/api/getEnableAppPairing
+Authorization: Bearer {{token}}
+```
+
 ### 🔶 輪詢 App 配料資料
 
 ```http
-GET /api/getAppPairingData
-Authorization: Bearer <token>
+GET {{url}}/api/getAppPairingData
+Authorization: Bearer {{token}}
 ```
